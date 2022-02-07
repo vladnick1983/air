@@ -26,15 +26,15 @@ const createFormsPerson = (n) => {
   });
   fieldName.append(labelName, inputName);
 
-  const fieldNumber = createElement("div", {
+  const fieldTicket = createElement("div", {
     className: "field",
   });
-  const labelNumber = createElement("label", {
+  const labelTicket = createElement("label", {
     className: "field__label",
     textContent: "Номер билета (10 цифр)",
     for: `ticket${n}`,
   });
-  const inputNumber = createElement("input", {
+  const inputTicket = createElement("input", {
     className: "field__input",
     id: `ticket${n}`,
     name: "ticket",
@@ -44,7 +44,7 @@ const createFormsPerson = (n) => {
     minLength: "10",
     maxLength: "10",
   });
-  fieldNumber.append(labelNumber, inputNumber);
+  fieldTicket.append(labelTicket, inputTicket);
 
   const button = createElement("button", {
     className: "btn-confirm",
@@ -52,7 +52,7 @@ const createFormsPerson = (n) => {
     textContent: "Подтвердить",
   });
 
-  form.append(title, fieldName, fieldNumber, button);
+  form.append(title, fieldName, fieldTicket, button);
   return form;
 };
 
